@@ -47,8 +47,6 @@ import java.util.concurrent.Executors;
  * </p>
  * 
  * 
- * 
- * 
  * <p>
  * <h3>Different approaches of Singleton pattern implementation :</h3>
  * <ol>
@@ -158,6 +156,21 @@ public class Singleton {
 		Thread.sleep(1000);
 		executorbss.shutdown();
 		System.out.println();
+		
+		
+		// Use Reflection to Destroy Singleton Pattern
+		EagerInitializedSingleton rds = EagerInitializedSingleton.getInstance();
+		EagerInitializedSingleton rds1 = EagerInitializedSingleton.getInstance();
+		EagerInitializedSingleton rds2 = ReflectionDestroySingleton.getReflectionDestroyedSingleton();
+		System.out.println("6. Use Reflection to Destroy Singleton Pattern");
+		System.out.println(rds);
+		System.out.println(rds1);
+		System.out.println(rds2);
+		System.out.println();
+		
+		
+		
+		
 
 	}
 
