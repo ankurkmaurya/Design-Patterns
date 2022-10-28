@@ -14,11 +14,13 @@ package com.ankurmaurya.prototype;
  * <h3>Structure :</h3> The Factory knows how to find the correct Prototype, and
  * each Product knows how to spawn new instances of itself.
  * 
- * <h3>Prototype Design Participants : </h3>
+ * <h3>Prototype Design Participants :</h3>
  * <ol>
- *  <li><b>Prototype :</b> This is the prototype of an actual object.</li>
- *  <li><b>Prototype registry :</b> This is used as a registry service to have all prototypes accessible using simple string parameters.</li>
- *  <li><b>Client :</b> Client will be responsible for using registry service to access prototype instances.</li>
+ * <li><b>Prototype :</b> This is the prototype of an actual object.</li>
+ * <li><b>Prototype Registry :</b> This is used as a registry service to have
+ * all prototypes accessible using simple string parameters.</li>
+ * <li><b>Client :</b> Client will be responsible for using registry service to
+ * access prototype instances.</li>
  * </ol>
  * 
  * <h3>Points :</h3>
@@ -66,19 +68,20 @@ public class Prototype {
 
 	public static void main(String[] args) {
 		try {
-			
 			String moviePrototype = PrototypeFactory.getInstance(PrototypeType.MOVIE).initName("KANTARA").toString();
 			System.out.println(moviePrototype);
 
 			String albumPrototype = PrototypeFactory.getInstance(PrototypeType.ALBUM).initName("ROCKING").toString();
 			System.out.println(albumPrototype);
 
-			String showPrototype = PrototypeFactory.getInstance(PrototypeType.SHOW).initName("STANDUP COMEDY").toString();
+			String showPrototype = PrototypeFactory.getInstance(PrototypeType.SHOW).initName("STANDUP COMEDY")
+					.toString();
 			System.out.println(showPrototype);
-			
+
 		} catch (CloneNotSupportedException e) {
 			e.printStackTrace();
 		}
-
 	}
+	
+
 }
