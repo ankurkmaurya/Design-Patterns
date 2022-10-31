@@ -16,6 +16,9 @@ package com.ankurmaurya.creational.singleton;
  * time, <i>double checked locking</i> principle is used. In this approach, the
  * synchronized block is used inside the if condition with an additional check
  * to ensure that only one instance of a singleton class is created.</li>
+ * <li><b>Note : </b>The volatile prevents memory writes from being re-ordered,
+ * making it impossible for other threads to read uninitialized fields of your
+ * singleton through the singleton's pointer.</li>
  * </ul>
  * </p>
  * 
@@ -26,7 +29,10 @@ package com.ankurmaurya.creational.singleton;
 
 public class ThreadSafeSingleton {
 
-	private static ThreadSafeSingleton instance;
+	private static ThreadSafeSingleton instance; // No So Thread Safe Singleton
+
+	// Thread Safe Singleton with volatile
+	// private static volatile ThreadSafeSingleton instance;
 
 	public static synchronized ThreadSafeSingleton getInstance() {
 		if (instance == null) {

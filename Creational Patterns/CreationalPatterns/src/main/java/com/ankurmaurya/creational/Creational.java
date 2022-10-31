@@ -38,6 +38,6 @@ package com.ankurmaurya.creational;
 public class Creational {
 
 	 public static void main(String[] args) {
-		
+		 System.out.println("------ CREATIONAL DESIGN PATTERNS ------");
 	}
 }
