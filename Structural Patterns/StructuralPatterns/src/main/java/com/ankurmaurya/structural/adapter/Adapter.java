@@ -1,9 +1,23 @@
 package com.ankurmaurya.structural.adapter;
 
-
 /**
  * 
  * <h1>Adapter Design Pattern</h1>
+ * <p>
+ * The adapter design pattern is one of the structural design patterns and it’s
+ * used so that two unrelated interfaces can work together. The object that
+ * joins these unrelated interfaces is called an Adapter.
+ * </p>
+ * 
+ * 
+ * <h3>Structure :</h3>
+ * <ol>
+ * <li>Convert the interface of a class into another interface clients expect.
+ * Adapter lets classes work together that couldn't otherwise because of
+ * incompatible interfaces.</li>
+ * <li>Wrap an existing class with a new interface.</li>
+ * <li>Impedance match an old component to a new system</li>
+ * </ol>
  * 
  * 
  * <h3>Points :</h3>
@@ -22,12 +36,13 @@ package com.ankurmaurya.structural.adapter;
  * 
  * @author Ankur Maurya
  * 
+ * 
  */
-
 
 public class Adapter {
 
-	
-	
-	
+	public static void main(String[] args) {
+
+	}
+
 }
