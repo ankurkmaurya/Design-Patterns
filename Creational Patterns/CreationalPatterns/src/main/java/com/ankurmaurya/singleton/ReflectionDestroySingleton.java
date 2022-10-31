@@ -19,20 +19,23 @@ import java.lang.reflect.Constructor;
 
 public class ReflectionDestroySingleton {
 
-    public static EagerInitializedSingleton getReflectionDestroyedSingleton() {
-        EagerInitializedSingleton instance = null;
-        try {
-            Constructor[] constructors = EagerInitializedSingleton.class.getDeclaredConstructors();
-            for (Constructor constructor : constructors) {
-                //Below code will destroy the singleton pattern
-                constructor.setAccessible(true);
-                instance = (EagerInitializedSingleton) constructor.newInstance();
-                break;
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return instance;
-    }
-	
+	private ReflectionDestroySingleton() {
+	}
+
+	public static EagerInitializedSingleton getReflectionDestroyedSingleton() {
+		EagerInitializedSingleton instance = null;
+		try {
+			Constructor[] constructors = EagerInitializedSingleton.class.getDeclaredConstructors();
+			for (Constructor constructor : constructors) {
+				// Below code will destroy the singleton pattern
+				constructor.setAccessible(true);
+				instance = (EagerInitializedSingleton) constructor.newInstance();
+				break;
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return instance;
+	}
+
 }

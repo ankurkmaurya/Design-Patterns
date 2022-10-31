@@ -70,8 +70,11 @@ import java.util.concurrent.Executors;
  *      Initialization
  * @see com.ankurmaurya.singleton.ThreadSafeSingleton 4. Thread Safe Singleton
  * @see com.ankurmaurya.singleton.BillPughSingleton 5. Bill Pugh Singleton
- * @see com.ankurmaurya.singleton. 6. Using Reflection to destroy Singleton
- *      Pattern
+ * @see com.ankurmaurya.singleton.ReflectionDestroySingleton 6. Using Reflection
+ *      to destroy Singleton Pattern
+ * @see com.ankurmaurya.singleton.EnumSingleton 7. Enum Singleton
+ * @see com.ankurmaurya.singleton.SerializedSingleton 8. Serialization and Singleton
+ * 
  * 
  * 
  * @author Ankur Maurya
@@ -80,7 +83,7 @@ import java.util.concurrent.Executors;
 
 public class Singleton {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws Exception {
 
 		// Eager Initialization
 		EagerInitializedSingleton eis = EagerInitializedSingleton.getInstance();
@@ -144,7 +147,6 @@ public class Singleton {
 		System.out.println("5. Bill Pugh Singleton Implementation");
 		System.out.println(bps);
 		System.out.println(bps1);
-
 		System.out.println("-> Multi-Threads does not break Bill Pugh Singleton Implementation");
 		ExecutorService executorbss = Executors.newFixedThreadPool(3);
 		Runnable r3 = () -> {
@@ -156,7 +158,7 @@ public class Singleton {
 		Thread.sleep(1000);
 		executorbss.shutdown();
 		System.out.println();
-		
+
 		
 		// Use Reflection to Destroy Singleton Pattern
 		EagerInitializedSingleton rds = EagerInitializedSingleton.getInstance();
@@ -165,12 +167,26 @@ public class Singleton {
 		System.out.println("6. Use Reflection to Destroy Singleton Pattern");
 		System.out.println(rds);
 		System.out.println(rds1);
+		System.out.println("Singleton broked with Reflection -> ");
 		System.out.println(rds2);
 		System.out.println();
+
 		
+		// Enum Singleton
+		System.out.println("7. Enum Singleton");
+		EnumSingleton.INSTANCE.setSomething("Ankur Maurya");
+		EnumSingleton.INSTANCE.doSomething();
+		String something = EnumSingleton.INSTANCE.getSomething();
+		System.out.println("Enum Instance Member Value - " + something);
+		System.out.println();
+
 		
-		
-		
+		// Enum Singleton
+		System.out.println("8. Serialization and Singleton");
+		SerializedSingleton serS1 = SerializedSingleton.getInstance();
+		System.out.println(serS1.hashCode());
+		SerializedSingleton.breakSingleton();
+		System.out.println();
 
 	}
 
