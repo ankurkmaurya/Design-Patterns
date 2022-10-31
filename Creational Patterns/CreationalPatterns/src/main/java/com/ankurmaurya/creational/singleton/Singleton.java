@@ -57,23 +57,26 @@ import java.util.concurrent.Executors;
  * <li>Bill Pugh Singleton Implementation</li>
  * <li>Using Reflection to destroy Singleton Pattern</li>
  * <li>Enum Singleton</li>
- * <li>Serialization and Singleton</li>
+ * <li>Serialization and Cloning Singleton</li>
  * </ol>
  * </p>
  * 
  * 
- * @see com.ankurmaurya.creational.singleton.EagerInitializedSingleton 1. Eager Initialized
- *      Singleton
- * @see com.ankurmaurya.creational.singleton.StaticBlockInitializedSingleton 2. Static
- *      Block Initialization
+ * @see com.ankurmaurya.creational.singleton.EagerInitializedSingleton 1. Eager
+ *      Initialized Singleton
+ * @see com.ankurmaurya.creational.singleton.StaticBlockInitializedSingleton 2.
+ *      Static Block Initialization
  * @see com.ankurmaurya.creational.singleton.LazyInitializedSingleton 3. Lazy
  *      Initialization
- * @see com.ankurmaurya.creational.singleton.ThreadSafeSingleton 4. Thread Safe Singleton
- * @see com.ankurmaurya.creational.singleton.BillPughSingleton 5. Bill Pugh Singleton
- * @see com.ankurmaurya.creational.singleton.ReflectionDestroySingleton 6. Using Reflection
- *      to destroy Singleton Pattern
+ * @see com.ankurmaurya.creational.singleton.ThreadSafeSingleton 4. Thread Safe
+ *      Singleton
+ * @see com.ankurmaurya.creational.singleton.BillPughSingleton 5. Bill Pugh
+ *      Singleton
+ * @see com.ankurmaurya.creational.singleton.ReflectionDestroySingleton 6. Using
+ *      Reflection to destroy Singleton Pattern
  * @see com.ankurmaurya.creational.singleton.EnumSingleton 7. Enum Singleton
- * @see com.ankurmaurya.creational.singleton.SerializedSingleton 8. Serialization and Singleton
+ * @see com.ankurmaurya.creational.singleton.SerializedClonedSingleton 8.
+ *      Serialization and Cloning Singleton
  * 
  * 
  * 
@@ -159,7 +162,6 @@ public class Singleton {
 		executorbss.shutdown();
 		System.out.println();
 
-		
 		// Use Reflection to Destroy Singleton Pattern
 		EagerInitializedSingleton rds = EagerInitializedSingleton.getInstance();
 		EagerInitializedSingleton rds1 = EagerInitializedSingleton.getInstance();
@@ -171,7 +173,6 @@ public class Singleton {
 		System.out.println(rds2);
 		System.out.println();
 
-		
 		// Enum Singleton
 		System.out.println("7. Enum Singleton");
 		EnumSingleton.INSTANCE.setSomething("Ankur Maurya");
@@ -180,12 +181,15 @@ public class Singleton {
 		System.out.println("Enum Instance Member Value - " + something);
 		System.out.println();
 
-		
 		// Enum Singleton
-		System.out.println("8. Serialization and Singleton");
-		SerializedSingleton serS1 = SerializedSingleton.getInstance();
+		System.out.println("8. Serialization and Cloning Singleton");
+		System.out.println("-> Serializable");
+		SerializedClonedSingleton serS1 = SerializedClonedSingleton.getInstance();
 		System.out.println(serS1.hashCode());
-		SerializedSingleton.breakSingleton();
+		SerializedClonedSingleton.breakSingleton();
+		System.out.println("-> Cloneable");
+		SerializedClonedSingleton serC1 = (SerializedClonedSingleton) serS1.clone();
+		System.out.println(serC1.hashCode());
 		System.out.println();
 
 	}

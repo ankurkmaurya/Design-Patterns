@@ -12,9 +12,11 @@ package com.ankurmaurya.creational.singleton;
  * class using an inner static helper class.</li>
  * <li>The private inner static class contains the instance of the singleton
  * class.</li>
- * <li>When this <i>BillPughSingleton</i> class is loaded, <i>BillPughSingletonHelper</i>
- * class is not loaded into memory and only when someone calls the getInstance
- * method, this class gets loaded and creates the Singleton class instance.</li>
+ * <li>When this <i>BillPughSingleton</i> class is loaded,
+ * <i>BillPughSingletonHelper</i> class is not loaded into memory and only when
+ * someone calls the getInstance method, this class gets loaded and creates the
+ * Singleton class instance. So it may seem like eager initialization but it is
+ * lazy initialization.</li>
  * <li>It is the most widely used approach for Singleton class as it doesn’t
  * require synchronization.</li>
  * </ul>
@@ -39,7 +41,7 @@ public class BillPughSingleton {
 	// private constructor to avoid client applications to use constructor
 	private BillPughSingleton() {
 	}
-	
+
 	public void display() {
 		System.out.println("Display -> 1");
 	}

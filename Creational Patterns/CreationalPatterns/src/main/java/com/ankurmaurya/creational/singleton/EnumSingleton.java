@@ -10,6 +10,12 @@ package com.ankurmaurya.creational.singleton;
  * <li>Since Java Enum values are globally accessible, so is the singleton.</li>
  * <li>The drawback is that the enum type is somewhat inflexible; for example,
  * it does not allow lazy initialization.</li>
+ * <li>As enums don’t have any constructor so it is not possible for Reflection
+ * to utilize it. Enums have their by-default constructor, we can’t invoke them
+ * by ourself. JVM handles the creation and invocation of enum constructors
+ * internally. As enums don’t give their constructor definition to the program,
+ * it is not possible for us to access them by Reflection also. Hence,
+ * reflection can’t break singleton property in case of enums.</li>
  * </ul>
  * </p>
  * 
@@ -27,7 +33,7 @@ public enum EnumSingleton {
 	public synchronized String getSomething() {
 		return something;
 	}
-	
+
 	public synchronized void setSomething(String some) {
 		this.something = some;
 	}
