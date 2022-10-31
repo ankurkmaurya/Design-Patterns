@@ -30,6 +30,15 @@ package com.ankurmaurya.structural;
  * <li><b>Private Class Data : </b>Restricts accessor/mutator access</li>
  * </ol>
  * 
+ * @see com.ankurmaurya.structural.adapter.Adapter 1. Adapter
+ * @see com.ankurmaurya.structural. 2. Bridge
+ * @see com.ankurmaurya.structural.composite.Composite 3. Composite
+ * @see com.ankurmaurya.structural. 4. Decorator
+ * @see com.ankurmaurya.structural. 5. Facade
+ * @see com.ankurmaurya.structural. 6. Flyweight
+ * @see com.ankurmaurya.structural. 7. Proxy
+ * @see com.ankurmaurya.structural. 8. Private Class Data
+ * 
  * 
  * @author Ankur Maurya
  * 
