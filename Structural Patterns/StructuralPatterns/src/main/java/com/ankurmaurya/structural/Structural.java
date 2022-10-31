@@ -15,6 +15,7 @@ package com.ankurmaurya.structural;
  * interfaces.</li>
  * <li>Structural object-patterns define ways to compose objects to obtain new
  * functionality.</li>
+ * <li>Structural patterns are concerned with how classes and objects are composed to form larger structures.</li>
  * </ul>
  * 
  * <h3>Various Structural Design Patterns</h3>

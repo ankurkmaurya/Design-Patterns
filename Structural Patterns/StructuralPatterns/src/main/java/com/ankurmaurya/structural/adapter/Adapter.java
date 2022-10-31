@@ -75,12 +75,13 @@ public class Adapter {
 
 	public static void main(String[] args) {
 
-		System.out.println("1. Object Adapter Implementation");
+		System.out.println("1. Object Adapter Implementation.");
 		Movable bugattiVeyron = new BugattiVeyron();
 		MovableAdapter bugattiVeyronOAdapter = new MovableObjectAdapterImpl(bugattiVeyron);
 		System.out.println("MPH - " + bugattiVeyron.getSpeed());
 		System.out.println("KM/H - " + bugattiVeyronOAdapter.getSpeed());
-		System.out.println("2. Class Adapter Implementation");
+		System.out.println();
+		System.out.println("2. Class Adapter Implementation.");
 		MovableAdapter bugattiVeyronCAdapter = new MovableClassAdapterImpl();
 		System.out.println("MPH - " + bugattiVeyron.getSpeed());
 		System.out.println("KM/H - " + bugattiVeyronCAdapter.getSpeed());
