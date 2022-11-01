@@ -1,2 +1,2 @@
-**/target
-**/target/*.jar
+/Structural Patterns/StructuralPatterns
+/Structural Patterns/StructuralPatterns/*.jar
