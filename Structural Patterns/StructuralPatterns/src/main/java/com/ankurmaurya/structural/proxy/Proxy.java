@@ -9,8 +9,7 @@ package com.ankurmaurya.structural.proxy;
  * proxy pattern is used when we want to provide controlled access of a
  * functionality.
  * </p>
- * <p>
- * </p>
+ * 
  * 
  * <h3>Structure :</h3>
  * <ul>
@@ -59,6 +58,7 @@ package com.ankurmaurya.structural.proxy;
  * pattern.</li>
  * </ul>
  * 
+ * 
  * <h3>Types of Proxies (Applicability) : </h3>
  * <ul>
  * <li><b>Virtual Proxy (Lazy initialization) - </b> This is when you have a
@@ -90,6 +90,7 @@ public class Proxy {
 		CommandExecutor adminExecutor = new CommandExecutorProxy("admin", "ABCD1234");
 		CommandExecutor normalExecutor = new CommandExecutorProxy("user", "1234");
 		try {
+			System.out.println("--- Proxy Pattern ---");
 			System.out.println("ADMIN USER - ");
 			adminExecutor.runCommand("cmd.exe dir \"C:\"");
 			adminExecutor.runCommand("systeminfo");
