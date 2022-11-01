@@ -2,7 +2,7 @@ package com.ankurmaurya.structural.flyweight;
 
 public abstract class PenImpl implements Pen {
 
-	private String color; // Intrinsic state - shareable
+	private String color; // Intrinsic state - shareable, immutable
 	private BrushSize brushSize; // Extrinsic state - supplied by client
 
 	protected PenImpl(String color) {
