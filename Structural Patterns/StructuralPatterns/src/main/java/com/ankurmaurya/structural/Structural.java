@@ -31,12 +31,12 @@ package com.ankurmaurya.structural;
  * </ol>
  * 
  * @see com.ankurmaurya.structural.adapter.Adapter 1. Adapter
- * @see com.ankurmaurya.structural. 2. Bridge
+ * @see com.ankurmaurya.structural.bridge. 2. Bridge
  * @see com.ankurmaurya.structural.composite.Composite 3. Composite
- * @see com.ankurmaurya.structural. 4. Decorator
- * @see com.ankurmaurya.structural. 5. Facade
- * @see com.ankurmaurya.structural. 6. Flyweight
- * @see com.ankurmaurya.structural. 7. Proxy
+ * @see com.ankurmaurya.structural.decorator. 4. Decorator
+ * @see com.ankurmaurya.structural.facade. 5. Facade
+ * @see com.ankurmaurya.structural.flyweight. 6. Flyweight
+ * @see com.ankurmaurya.structural.proxy.Proxy 7. Proxy
  * @see com.ankurmaurya.structural. 8. Private Class Data
  * 
  * 
