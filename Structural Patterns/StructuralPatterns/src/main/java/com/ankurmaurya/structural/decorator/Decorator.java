@@ -101,38 +101,13 @@ package com.ankurmaurya.structural.decorator;
 public class Decorator {
 
 	public static void main(String[] args) {
-		
+
 		System.out.println("---- Decorator Pattern Implementation ----");
 		Writer fileWriter = new DataEncrypModifier(new DataCompressModifier(new FileWriter()));
 		fileWriter.writeData("I am a Decorator for File Writer.");
-		
+
 		Writer streamWriter = new DataEncrypModifier(new DataCompressModifier(new StreamWriter()));
 		streamWriter.writeData("I am a Decorator for Stream Writer.");
-		
-	}
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}
 }
