@@ -27,7 +27,6 @@ package com.ankurmaurya.structural;
  * <li><b>Facade : </b>A single class that represents an entire subsystem</li>
  * <li><b>Flyweight : </b>A fine-grained instance used for efficient sharing</li>
  * <li><b>Proxy : </b>An object representing another object</li>
- * <li><b>Private Class Data : </b>Restricts accessor/mutator access</li>
  * </ol>
  * 
  * @see com.ankurmaurya.structural.adapter.Adapter 1. Adapter
@@ -37,7 +36,6 @@ package com.ankurmaurya.structural;
  * @see com.ankurmaurya.structural.facade.Facade 5. Facade
  * @see com.ankurmaurya.structural.flyweight.Flyweight 6. Flyweight
  * @see com.ankurmaurya.structural.proxy.Proxy 7. Proxy
- * @see com.ankurmaurya.structural. 8. Private Class Data
  * 
  * 
  * @author Ankur Maurya
