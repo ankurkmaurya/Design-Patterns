@@ -101,13 +101,13 @@ package com.ankurmaurya.structural.bridge;
 public class Bridge {
 
 	public static void main(String[] args) {
-
+		
 		System.out.println("--- Bridge Pattern ---");
-		Shape tri = new Triangle(new RedColor());
-		tri.draw();
-		Shape pent = new Pentagon(new GreenColor());
-		pent.draw();
-
+		Shape tria = new Triangle(new RedColor());
+		tria.draw();
+		Shape penta = new Pentagon(new GreenColor());
+		penta.draw();
+		
 	}
 
 }

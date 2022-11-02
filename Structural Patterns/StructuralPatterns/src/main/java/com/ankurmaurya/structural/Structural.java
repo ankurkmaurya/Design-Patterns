@@ -31,9 +31,9 @@ package com.ankurmaurya.structural;
  * </ol>
  * 
  * @see com.ankurmaurya.structural.adapter.Adapter 1. Adapter
- * @see com.ankurmaurya.structural.bridge. 2. Bridge
+ * @see com.ankurmaurya.structural.bridge.Bridge 2. Bridge
  * @see com.ankurmaurya.structural.composite.Composite 3. Composite
- * @see com.ankurmaurya.structural.decorator. 4. Decorator
+ * @see com.ankurmaurya.structural.decorator.Decorator 4. Decorator
  * @see com.ankurmaurya.structural.facade.Facade 5. Facade
  * @see com.ankurmaurya.structural.flyweight.Flyweight 6. Flyweight
  * @see com.ankurmaurya.structural.proxy.Proxy 7. Proxy
