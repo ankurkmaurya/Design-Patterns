@@ -11,7 +11,6 @@ public abstract class DataModifier implements Writer {
 
 	@Override
 	public void writeData(String data) {
-		Writer w = this;
 		this.writer.writeData(data);
 	}
 

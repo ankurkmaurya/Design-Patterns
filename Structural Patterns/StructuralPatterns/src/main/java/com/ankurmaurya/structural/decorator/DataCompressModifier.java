@@ -8,7 +8,6 @@ public class DataCompressModifier extends DataModifier {
 
 	@Override
 	public void writeData(String data) {
-		Writer w = this;
 		super.writeData(compressData(data));
 	}
 	

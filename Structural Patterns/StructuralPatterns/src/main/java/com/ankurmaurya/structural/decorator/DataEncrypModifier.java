@@ -8,14 +8,6 @@ public class DataEncrypModifier extends DataModifier {
 
 	@Override
 	public void writeData(String data) {
-		Writer w = this;
-		
-		if(this instanceof DataModifier) {
-			
-		}
-		
-		
-		
 		super.writeData(encryptData(data));
 	}
 	
