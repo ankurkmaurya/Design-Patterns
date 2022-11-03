@@ -3,9 +3,6 @@ package com.ankurmaurya.behavioral.chainofresp;
 
 public class NumericDataProcessor extends DataProcessorImpl {
 
-	public NumericDataProcessor(DataProcessor dataProcessor) {
-		super(dataProcessor);
-	}
 
 	@Override
 	public boolean isValidData(String data) {

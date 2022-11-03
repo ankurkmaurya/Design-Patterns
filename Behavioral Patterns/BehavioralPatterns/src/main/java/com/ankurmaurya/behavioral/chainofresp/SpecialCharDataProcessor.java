@@ -2,10 +2,6 @@ package com.ankurmaurya.behavioral.chainofresp;
 
 public class SpecialCharDataProcessor extends DataProcessorImpl {
 
-	public SpecialCharDataProcessor(DataProcessor dataProcessor) {
-		super(dataProcessor);
-	}
-
 	@Override
 	public boolean isValidData(String data) {
 		return !data.matches(".*[//{//}//,//.//;].*");

@@ -72,10 +72,18 @@ public class ChainOfResponsibility {
 
 	public static void main(String[] args) {
 		String data = "4#A{7B5,6.7xC}Dj1;;;(:)";
+		
 		System.out.println("------ Chain Of Responsibility Pattern Implementation ------");
-		NumericDataProcessor ucdp = new NumericDataProcessor(
-				new UpperCaseDataProcessor(new SpecialCharDataProcessor(null)));
-		String processedData = ucdp.processData(data);
+		
+		NumericDataProcessor ndp = new NumericDataProcessor();
+		UpperCaseDataProcessor udp = new UpperCaseDataProcessor();
+		SpecialCharDataProcessor sdp = new SpecialCharDataProcessor();
+		
+		ndp.setNext(udp);
+		udp.setNext(sdp);
+		
+
+		String processedData = ndp.processData(data);
 		System.out.println(processedData);
 	}
 
