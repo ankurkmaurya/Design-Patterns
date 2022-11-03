@@ -10,8 +10,7 @@ package com.ankurmaurya.behavioral.chainofresp;
  * processing the request and whether the request is required to be sent to the
  * next object in the chain or not.
  * </p>
- * <p>
- * </p>
+ * 
  * 
  * <h3>Structure :</h3>
  * <ol>
