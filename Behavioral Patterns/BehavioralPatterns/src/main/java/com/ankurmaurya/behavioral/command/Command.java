@@ -57,8 +57,8 @@ package com.ankurmaurya.behavioral.command;
  * <li>The drawback with Command design pattern is that the code gets huge and
  * confusing with high number of action methods and because of so many
  * associations.</li>
- * <li>Runnable interface (java.lang.Runnable) and Swing Action
- * (javax.swing.Action) uses command pattern.</li>
+ * <li>Runnable interface <i>java.lang.Runnable</i> and Swing Action
+ * <i>javax.swing.Action</i> uses command pattern.</li>
  * <li>Use the Command pattern when you want to parametrize objects with
  * operations.</li>
  * <li>Use the Command pattern when you want to queue operations, schedule their
