@@ -11,7 +11,7 @@ public class OrderServiceFacadeImpl implements OrderServiceFacade {
 	            boolean paymentConfirmed= PaymentServiceImpl.makePayment();
 	            if(paymentConfirmed){
 	                System.out.println("Payment confirmed...");
-	                ShippingService.shipProduct(product);
+	                ShippingServiceImpl.shipProduct(product);
 	                System.out.println("Product shipped...");
 	                orderFulfilled=true;
 	            }
