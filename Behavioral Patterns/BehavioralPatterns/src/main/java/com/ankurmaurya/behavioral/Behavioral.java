@@ -41,7 +41,7 @@ package com.ankurmaurya.behavioral;
  * @see com.ankurmaurya.behavioral.command.Command 2. Command
  * @see com.ankurmaurya.behavioral.interpreter.Interpreter 3. Interpreter
  * @see com.ankurmaurya.behavioral.iterator.Iterator 4. Iterator
- * @see com.ankurmaurya.behavioral.facade.Facade 5. Mediator
+ * @see com.ankurmaurya.behavioral.mediator.Mediator 5. Mediator
  * @see com.ankurmaurya.behavioral.flyweight.Flyweight 6. Memento
  * @see com.ankurmaurya.behavioral.proxy.Proxy 7. Observer
  * @see com.ankurmaurya.behavioral.proxy.Proxy 8. State
