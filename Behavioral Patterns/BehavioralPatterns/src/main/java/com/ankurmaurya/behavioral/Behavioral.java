@@ -39,7 +39,7 @@ package com.ankurmaurya.behavioral;
  * @see com.ankurmaurya.behavioral.chainofresp.ChainOfResponsibility 1. Chain of
  *      Responsibility
  * @see com.ankurmaurya.behavioral.command.Command 2. Command
- * @see com.ankurmaurya.behavioral.composite.interpreter 3. Interpreter
+ * @see com.ankurmaurya.behavioral.interpreter.Interpreter 3. Interpreter
  * @see com.ankurmaurya.behavioral.decorator.Decorator 4. Iterator
  * @see com.ankurmaurya.behavioral.facade.Facade 5. Mediator
  * @see com.ankurmaurya.behavioral.flyweight.Flyweight 6. Memento
