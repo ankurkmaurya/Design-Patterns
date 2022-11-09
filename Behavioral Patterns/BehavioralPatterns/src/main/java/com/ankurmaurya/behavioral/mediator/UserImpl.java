@@ -4,7 +4,6 @@ public class UserImpl extends User {
 
 	public UserImpl(ChatDistributor distributor, String name) {
 		super(distributor, name);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override

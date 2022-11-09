@@ -67,8 +67,6 @@ package com.ankurmaurya.behavioral.mediator;
  * </p>
  * 
  * 
- * 
- * 
  * @author Ankur Maurya
  * 
  */
