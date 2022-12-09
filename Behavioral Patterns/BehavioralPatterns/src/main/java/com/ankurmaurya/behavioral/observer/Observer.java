@@ -11,15 +11,20 @@ package com.ankurmaurya.behavioral.observer;
  * </p>
  * <p>
  * Define a one-to-many dependency between objects so that when one object
- * changes state, all its dependents are notified and updated automatically.
+ * changes state, all its dependents are notified and updated automatically. It
+ * specifies communication between objects: observable and observers. An
+ * observable is an object which notifies observers about the changes in its
+ * state.
  * </p>
  * 
  * 
  * <h3>Structure :</h3>
  * <ol>
- * <li></li>
- * <li></li>
- * <li></li>
+ * <li><b>Observable (Publisher) :</b> The object that has some interesting state is
+ * often called subject, but since it’s also going to notify other objects about
+ * the changes to its state, we’ll call it publisher.</li>
+ * <li><b>Observers (Subscribers) :</b> All other objects that want to track changes to
+ * the publisher’s state are called subscribers.</li>
  * </ol>
  * 
  * 
