@@ -16,7 +16,6 @@ package com.ankurmaurya.behavioral;
  * communication.</li>
  * <li>Behavioral design patterns are concerned with algorithms and the
  * assignment of responsibilities between objects.</li>
- * <li></li>
  * </ul>
  * 
  * <h3>Various Behavioral Design Patterns</h3>

@@ -97,8 +97,8 @@ public class Singleton {
 		System.out.println();
 
 		// Static Block Initialization
-		EagerInitializedSingleton sbi = EagerInitializedSingleton.getInstance();
-		EagerInitializedSingleton sbi1 = EagerInitializedSingleton.getInstance();
+		StaticBlockInitializedSingleton sbi = StaticBlockInitializedSingleton.getInstance();
+		StaticBlockInitializedSingleton sbi1 = StaticBlockInitializedSingleton.getInstance();
 		System.out.println("2. Static Block Initialization");
 		System.out.println(sbi);
 		System.out.println(sbi1);
@@ -114,9 +114,7 @@ public class Singleton {
 
 		System.out.println("-> Multi-Threads Break Lazy Initialization");
 		ExecutorService executor = Executors.newFixedThreadPool(3);
-		Runnable r1 = () -> {
-			System.out.println("   " + LazyInitializedSingleton.getInstance());
-		};
+		Runnable r1 = () -> System.out.println("   " + LazyInitializedSingleton.getInstance());
 		executor.submit(r1);
 		executor.submit(r1);
 		executor.submit(r1);
@@ -134,9 +132,7 @@ public class Singleton {
 
 		System.out.println("-> Multi-Threads does not break Thread Safe Singleton");
 		ExecutorService executortss = Executors.newFixedThreadPool(3);
-		Runnable r2 = () -> {
-			System.out.println("   " + ThreadSafeSingleton.getInstance());
-		};
+		Runnable r2 = () -> System.out.println("   " + ThreadSafeSingleton.getInstance());
 		executortss.submit(r2);
 		executortss.submit(r2);
 		executortss.submit(r2);
@@ -152,9 +148,7 @@ public class Singleton {
 		System.out.println(bps1);
 		System.out.println("-> Multi-Threads does not break Bill Pugh Singleton Implementation");
 		ExecutorService executorbss = Executors.newFixedThreadPool(3);
-		Runnable r3 = () -> {
-			System.out.println("   " + BillPughSingleton.getInstance());
-		};
+		Runnable r3 = () -> System.out.println("   " + BillPughSingleton.getInstance());
 		executorbss.submit(r3);
 		executorbss.submit(r3);
 		executorbss.submit(r3);

@@ -29,7 +29,7 @@ package com.ankurmaurya.creational.singleton;
 
 public class ThreadSafeSingleton {
 
-	private static ThreadSafeSingleton instance; // No So Thread Safe Singleton
+	private static ThreadSafeSingleton instance; // Not So Thread Safe Singleton
 
 	// Thread Safe Singleton with volatile
 	// private static volatile ThreadSafeSingleton instance;
