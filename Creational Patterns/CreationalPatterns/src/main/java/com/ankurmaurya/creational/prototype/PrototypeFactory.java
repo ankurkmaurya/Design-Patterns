@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class PrototypeFactory {
 
-	private static Map<PrototypeType, PrototypeCapable> prototypes = new EnumMap<PrototypeType, PrototypeCapable>(PrototypeType.class);
+	private static Map<PrototypeType, PrototypeCapable> prototypes = new EnumMap<>(PrototypeType.class);
 	
 	static {
 		prototypes.put(PrototypeType.MOVIE, new Movie());

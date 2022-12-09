@@ -74,7 +74,7 @@ public class ChainOfResponsibility {
 		String data = "4#A{7B5,6.7xC}Dj1;;;(:)";
 		
 		System.out.println("------ Chain Of Responsibility Pattern Implementation ------");
-		
+
 		NumericDataProcessor ndp = new NumericDataProcessor();
 		UpperCaseDataProcessor udp = new UpperCaseDataProcessor();
 		SpecialCharDataProcessor sdp = new SpecialCharDataProcessor();
@@ -82,7 +82,7 @@ public class ChainOfResponsibility {
 		ndp.setNext(udp);
 		udp.setNext(sdp);
 		
-
+		System.out.println("Data to Process : " + data);
 		String processedData = ndp.processData(data);
 		System.out.println(processedData);
 	}
