@@ -42,7 +42,7 @@ package com.ankurmaurya.behavioral;
  * @see com.ankurmaurya.behavioral.iterator.Iterator 4. Iterator
  * @see com.ankurmaurya.behavioral.mediator.Mediator 5. Mediator
  * @see com.ankurmaurya.behavioral.memento.Memento 6. Memento
- * @see com.ankurmaurya.behavioral.proxy.Proxy 7. Observer
+ * @see com.ankurmaurya.behavioral.observer.Observer 7. Observer
  * @see com.ankurmaurya.behavioral.proxy.Proxy 8. State
  * @see com.ankurmaurya.behavioral.proxy.Proxy 9. Strategy
  * @see com.ankurmaurya.behavioral.proxy.Proxy 10. Template Method

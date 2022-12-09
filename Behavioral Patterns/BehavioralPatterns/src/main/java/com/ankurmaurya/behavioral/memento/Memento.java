@@ -93,7 +93,6 @@ public class Memento {
 
 		history.previous(nowPlaying);
 		System.out.println(nowPlaying);
-
 	}
 
 }
