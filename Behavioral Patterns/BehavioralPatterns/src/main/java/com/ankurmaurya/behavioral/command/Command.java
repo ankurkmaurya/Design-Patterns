@@ -14,7 +14,8 @@ package com.ankurmaurya.behavioral.command;
  * request-response model.<br>
  * The pattern intends to encapsulate in an object all the data required for
  * performing a given action (command), including what method to call, the
- * method's arguments, and the object to which the method belongs.
+ * method's arguments, and the object to which the method belongs.<br>
+ * <b>Command establishes unidirectional connections between senders and receivers.</b>
  * </p>
  * 
  * 
@@ -80,9 +81,9 @@ public class Command {
 
 		CommandExecutor openFileCommand = new OpenFileCommandExecutor(fs);
 		CommandExecutor writeFileCommand = new WriteFileCommandExecutor(fs);
-	    CommandExecutor closeFileCommand = new CloseFileCommandExecutor(fs);
+		CommandExecutor closeFileCommand = new CloseFileCommandExecutor(fs);
 
-	    System.out.println("-> EXECUTE COMMAND ");
+		System.out.println("-> EXECUTE COMMAND ");
 		// Creating invoker and associating with Command
 		FileInvoker file = new FileInvoker(openFileCommand);
 		// perform action on invoker object
@@ -91,7 +92,7 @@ public class Command {
 		file.execute();
 		file = new FileInvoker(closeFileCommand);
 		file.execute();
-		
+
 		System.out.println("-> UNDO COMMAND ");
 		file.undo();
 

@@ -7,13 +7,15 @@ package com.ankurmaurya.behavioral.mediator;
  * Mediator is a behavioral design pattern that lets you reduce chaotic
  * dependencies between objects. The pattern restricts direct communications
  * between the objects and forces them to collaborate only via a mediator
- * object. It is used to provide a centralized
- * communication medium between different objects in a system.
+ * object. It is used to provide a centralized communication medium between
+ * different objects in a system.
  * </p>
  * <p>
  * It allows loose coupling by encapsulating the way disparate sets of objects
  * interact and communicate with each other. Allows for the actions of each
- * object set to vary independently of one another.
+ * object set to vary independently of one another. <br>
+ * <b>Mediator eliminates direct connections between senders and receivers,
+ * forcing them to communicate indirectly via a mediator object.</b>
  * </p>
  * 
  * 
@@ -60,10 +62,14 @@ package com.ankurmaurya.behavioral.mediator;
  * doesn't add new functionality, and it is not known by the subsystem classes
  * (i.e. it defines a unidirectional protocol where it makes requests of the
  * subsystem classes but not vice versa).</li>
- * <li>Use the Mediator pattern when it’s hard to change some of the classes because they are tightly coupled to a bunch of other classes.</li>
- * <li>Use the pattern when you can’t reuse a component in a different program because it’s too dependent on other components.</li>
- * <li>Use the Mediator when you find yourself creating tons of component subclasses just to reuse some basic behavior in various contexts.</li>
- * <li>Disadvantage is over the time a mediator can evolve into a God Object.</li>
+ * <li>Use the Mediator pattern when it’s hard to change some of the classes
+ * because they are tightly coupled to a bunch of other classes.</li>
+ * <li>Use the pattern when you can’t reuse a component in a different program
+ * because it’s too dependent on other components.</li>
+ * <li>Use the Mediator when you find yourself creating tons of component
+ * subclasses just to reuse some basic behavior in various contexts.</li>
+ * <li>Disadvantage is over the time a mediator can evolve into a God
+ * Object.</li>
  * </p>
  * 
  * 
@@ -76,7 +82,7 @@ public class Mediator {
 	public static void main(String[] args) {
 
 		System.out.println("------ Mediator Design Pattern Implementation ------");
-		
+
 		ChatDistributor groupDistributor = new ChatDistributorImpl();
 		User user1 = new UserImpl(groupDistributor, "Mayur");
 		User user2 = new UserImpl(groupDistributor, "Mahendra");
@@ -89,18 +95,16 @@ public class Mediator {
 		groupDistributor.addUser(user2);
 		groupDistributor.addUser(user3);
 		groupDistributor.addUser(user4);
-		//groupDistributor.addUser(user5);
+		// groupDistributor.addUser(user5);
 		groupDistributor.addUser(user6);
 		groupDistributor.addUser(user7);
-		
+
 		user7.send("Hi All");
 		System.out.println();
 		user1.send("I am going to our College today.");
 		System.out.println();
 		user5.send("We have a new family member (Car).");
-		
-		
-		
+
 	}
 
 }

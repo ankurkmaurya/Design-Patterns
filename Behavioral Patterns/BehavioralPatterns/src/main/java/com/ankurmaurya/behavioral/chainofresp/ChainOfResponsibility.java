@@ -10,6 +10,10 @@ package com.ankurmaurya.behavioral.chainofresp;
  * processing the request and whether the request is required to be sent to the
  * next object in the chain or not.
  * </p>
+ * <p>
+ * <b>Chain of Responsibility passes a request sequentially along a dynamic chain
+ * of potential receivers until one of them handles it.</b>
+ * </p>
  * 
  * 
  * <h3>Structure :</h3>
@@ -52,13 +56,13 @@ package com.ankurmaurya.behavioral.chainofresp;
  * 
  * 
  * <p>
- * <h3>Applicability : </h3>
+ * <h3>Applicability :</h3>
  * <li>Use the Chain of Responsibility pattern when your program is expected to
  * process different kinds of requests in various ways, but the exact types of
- * requests and their sequences are unknown beforehand.
- * The pattern lets you link several handlers into one chain and, upon receiving
- * a request, “ask” each handler whether it can process it. This way all
- * handlers get a chance to process the request.</li>
+ * requests and their sequences are unknown beforehand. The pattern lets you
+ * link several handlers into one chain and, upon receiving a request, “ask”
+ * each handler whether it can process it. This way all handlers get a chance to
+ * process the request.</li>
  * <li>Use the pattern when it’s essential to execute several handlers in a
  * particular order.</li>
  * </p>
@@ -72,16 +76,16 @@ public class ChainOfResponsibility {
 
 	public static void main(String[] args) {
 		String data = "4#A{7B5,6.7xC}Dj1;;;(:)";
-		
+
 		System.out.println("------ Chain Of Responsibility Pattern Implementation ------");
 
 		NumericDataProcessor ndp = new NumericDataProcessor();
 		UpperCaseDataProcessor udp = new UpperCaseDataProcessor();
 		SpecialCharDataProcessor sdp = new SpecialCharDataProcessor();
-		
+
 		ndp.setNext(udp);
 		udp.setNext(sdp);
-		
+
 		System.out.println("Data to Process : " + data);
 		String processedData = ndp.processData(data);
 		System.out.println(processedData);
