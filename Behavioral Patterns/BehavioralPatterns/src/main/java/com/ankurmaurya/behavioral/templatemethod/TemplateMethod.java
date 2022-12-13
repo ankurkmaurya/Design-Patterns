@@ -51,7 +51,6 @@ package com.ankurmaurya.behavioral.templatemethod;
  * </p>
  * 
  * 
- * 
  * @author Ankur Maurya
  * 
  * 
@@ -62,6 +61,15 @@ public class TemplateMethod {
 	public static void main(String[] args) {
 		System.out.println("------ Template Method Design Pattern Implementation ------");
 
+		System.out.println("1. Internet Order");
+		OrderProcessTemplate netOrder = new InternetOrder();
+		netOrder.processOrder(false);
+		System.out.println();
+		
+		System.out.println("2. Store Order");
+		OrderProcessTemplate storeOrder = new StoreOrder();
+		storeOrder.processOrder(true);
+		
 	}
 
 }
