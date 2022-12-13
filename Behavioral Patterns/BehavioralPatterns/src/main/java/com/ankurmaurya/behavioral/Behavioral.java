@@ -45,8 +45,8 @@ package com.ankurmaurya.behavioral;
  * @see com.ankurmaurya.behavioral.observer.Observer 7. Observer
  * @see com.ankurmaurya.behavioral.state.State 8. State
  * @see com.ankurmaurya.behavioral.strategy.Strategy 9. Strategy
- * @see com.ankurmaurya.behavioral.proxy.Proxy 10. Template Method
- * @see com.ankurmaurya.behavioral.proxy.Proxy 11. Visitor
+ * @see com.ankurmaurya.behavioral.templatemethod.TemplateMethod 10. Template Method
+ * @see com.ankurmaurya.behavioral.visitor.Visitor 11. Visitor
  * 
  * 
  * 
