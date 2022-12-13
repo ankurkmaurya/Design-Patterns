@@ -66,7 +66,6 @@ public class Interpreter {
 		for (String numWord : numWords) {
 			System.out.println(numWord);
 			System.out.println(EvaluatorUtil.evaluateNumericWords(numWord));
-			// System.out.println();
 		}
 
 	}
