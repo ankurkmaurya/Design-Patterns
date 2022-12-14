@@ -90,7 +90,7 @@ public class Proxy {
 		CommandExecutor adminExecutor = new CommandExecutorProxy("admin", "ABCD1234");
 		CommandExecutor normalExecutor = new CommandExecutorProxy("user", "1234");
 		try {
-			System.out.println("--- Proxy Pattern ---");
+			System.out.println("--- Proxy Pattern [Protection Proxy] ---");
 			System.out.println("ADMIN USER - ");
 			adminExecutor.runCommand("cmd.exe dir \"C:\"");
 			adminExecutor.runCommand("systeminfo");
